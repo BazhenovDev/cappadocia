@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "SpectralSemiBold";
+    src: url("../fonts/Spectralscsemibold.ttf") format("truetype"),
+    url("../fonts/Spectralscsemibold.woff") format("woff"),
+    url("../fonts/Spectralscsemibold.woff2") format("woff2");
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #d5d9da;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-image {
+    height: 811px;
+    background: url("../images/bg.png") center center / cover no-repeat;
+}
+
+.header {
+    background-color: #dde0db;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+.header .container {
+    font-size: 0;
+}
+
+.header .logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header .menu {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 354px;
+}
+
+.header .menu ul {
+    font-size: 0;
+    list-style: none;
+}
+
+.header .menu ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 27px;
+}
+
+.header .menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(70, 80, 85);
+    line-height: 1.2;
+    border-bottom: 2px solid transparent;
+    transition: all .25s ease;
+}
+
+.header .menu ul li a:hover {
+    color: rgb(47, 40, 34);
+    border-color: rgb(47, 40, 34);
+}
+
+.header-actions {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 100px;
+}
+
+.button {
+    padding: 14px;
+    line-height: 11px;
+    width: 205px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0;
+}
+
+.button.button-transparent {
+    font-size: 16px;
+    color: rgb(121, 136, 144);
+    border: 1px solid rgb(129, 130, 130);
+    background-color: transparent;
+    transition: all .25s ease;
+}
+
+.button.button-transparent:hover {
+    background-color: #bcc0bb;
+}
+
+.gallery {
+    padding: 102px 0 55px;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    font-family: "SpectralSemiBold", sans-serif;
+    color: rgb(47, 40, 34);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.gallery-description  {
+    font-size: 18px;
+    color: rgb(62, 52, 44);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.gallery-items {
+    margin: 0 -12px;
+    font-size: 0;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 12px 11px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 384px;
+    height: 258px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-item-text {
+    position: absolute;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10;
+}
+
+.gallery-item.gallery-item-big {
+    width: 792px;
+}
+
+.gallery-eye {
+    position: absolute;
+    /*display: none;*/
+    opacity: 0; /*Сам добавил для плавного появления при наведение, за место display*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.6);
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.gallery-eye img {
+    position: relative;
+    top: calc(50% - 20px)
+}
+
+
+.gallery-item:hover .gallery-eye {
+    /*display: block;*/
+    opacity: 1; /*Сам добавил для плавного появления при наведение, за место display*/
+}
+
+.tours {
+    padding: 54px 0 76px;
+}
+
+.tours h2 {
+    font-size: 40px;
+    font-family: "SpectralSemiBold",sans-serif;
+    color: rgb(47, 40, 34);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.tours-items {
+    font-size: 0;
+    margin: 0 -12px;
+}
+
+.tour-item {
+    position: relative;
+    display: inline-block;
+    margin: 12px;
+    vertical-align: middle;
+    max-width: 384px;
+}
+
+.tour-item-info {
+    padding: 22px 22px 40px;
+    background-color: #31393f;
+}
+
+.tour-item-text {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.button.button-filled {
+    background-color: #da8246;
+    font-size: 18px;
+    color: rgb(37, 41, 43);
+    line-height: 1;
+    transition: all .25s ease;
+}
+
+.button.button-filled:hover {
+    box-shadow: 0 4px 14px 0 rgba(217, 149, 103, 0.8);
+}
+
+.tour-item-action {
+    text-align: center;
+}
+
+.fix-block {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 0 0 0 5px;
+    background-color: #da8246;
+    text-align: center;
+    line-height: 46px;
+    right: 0;
+    top: 0;
+}
+
+.fix-block img {
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 54px 0 49px;
+    background-color: #31393f;
+}
+
+.footer .container {
+    font-size: 0;
+}
+
+.footer .logo {
+    display: inline-block;
+}
+
+.footer-contacts {
+    display: inline-block;
+    margin-left: 900px;
+    text-align: center;
+}
+
+.footer-contact:nth-child(2) {
+    margin-bottom: 7px;
+}
+
+.footer-contacts-text {
+    font-size: 18px;
+    color: rgb(167, 185, 197);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(131, 145, 156);
+    line-height: 1;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.footer-contact a:hover {
+    color: rgb(99, 108, 117);
+}
